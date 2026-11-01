@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" role="img" aria-label="The cottage and shore, animated: swell crossing, thatch patch lifting in a draught, a seal raising its head">
+<rect width="1200" height="86" fill="#9aa5a3"/>
+<g stroke="#f4f1e8" stroke-width="4" fill="none" opacity="0.8"><path d="M-40,38 Q140,18 320,38 T680,38 T1040,38 T1400,38"><animateTransform attributeName="transform" type="translate" values="0,0;60,0;0,0" dur="30s" repeatCount="indefinite"/></path><path d="M-40,62 Q140,80 320,62 T680,62 T1040,62 T1400,62"><animateTransform attributeName="transform" type="translate" values="40,0;-20,0;40,0" dur="30s" repeatCount="indefinite"/></path></g>
+<ellipse cx="980" cy="30" rx="150" ry="18" fill="#f4f1e8" opacity="0.65"><animate attributeName="cx" values="940;1060;940" dur="30s" repeatCount="indefinite"/></ellipse>
+<rect y="86" width="1200" height="120" fill="#8b8f6a"/>
+<polygon points="240,196 420,92 880,92 1010,196" fill="#c2a14d"/>
+<g stroke="#a8893c" stroke-width="4"><line x1="330" y1="188" x2="440" y2="104"/><line x1="430" y1="186" x2="530" y2="102"/><line x1="530" y1="184" x2="620" y2="100"/><line x1="630" y1="182" x2="710" y2="100"/><line x1="730" y1="184" x2="800" y2="102"/><line x1="830" y1="188" x2="890" y2="106"/></g>
+<polygon points="690,100 806,100 812,158 696,158" fill="#dec27c"/>
+<g><polygon points="696,158 812,158 810,168 700,166" fill="#dec27c"><animateTransform attributeName="transform" type="rotate" values="0 700 160;0 700 160;-3 700 160;0 700 160;0 700 160" keyTimes="0;0.42;0.5;0.58;1" dur="20s" repeatCount="indefinite"/></polygon></g>
+<rect x="300" y="196" width="700" height="86" fill="#ddd6c4"/>
+<rect x="420" y="222" width="64" height="60" fill="#b9b2a0"/>
+<rect x="600" y="216" width="52" height="66" fill="#3e3226"/>
+<line x1="180" y1="238" x2="1080" y2="230" stroke="#3e3226" stroke-width="3"><animate attributeName="opacity" values="1;0.7;1" dur="20s" repeatCount="indefinite"/></line>
+<rect y="282" width="1200" height="58" fill="#6b6f6e"/>
+<g fill="#cfd6d0"><ellipse cx="240" cy="308" rx="90" ry="13"><animate attributeName="opacity" values="0.55;1;0.55" dur="15s" repeatCount="indefinite"/></ellipse><ellipse cx="700" cy="320" rx="70" ry="10"><animate attributeName="opacity" values="1;0.55;1" dur="15s" repeatCount="indefinite"/></ellipse></g>
+<g><ellipse cx="130" cy="300" rx="34" ry="12" fill="#8a7d6f"/><circle cx="104" cy="292" r="10" fill="#8a7d6f"><animate attributeName="cy" values="292;292;284;284;292" keyTimes="0;0.55;0.65;0.8;1" dur="20s" repeatCount="indefinite"/></circle></g>
+</svg>
