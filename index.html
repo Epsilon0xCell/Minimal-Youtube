@@ -3,147 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Minimal Youtube: what it is, how it runs, where it stops</title>
-<meta name="description" content="Minimal Youtube is one of my projects. The README in the repo is short, so this page sticks to what the files themselves show.">
+<title>Minimal-Youtube: a signpost at the cottage door</title>
+<meta name="description" content="A pointer repo holding one Chrome Web Store link for the MinimalTube extension, for a cleaner YouTube interface.">
 <style>
-:root {
-  --bg: #0a120e; --panel: #101c16; --ink: #e6f0e2;
-  --mut: #15251d;
-  --acc: #a8e05c; --acc2: #f0be54;
-  --line: #101c16;
-}
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--ink);
-  font-family: ' Gill Sans', 'Segoe UI', sans-serif; line-height: 1.55; }
-code, pre, .mono { font-family: 'SF Mono', monospace; }
-a { color: var(--acc2); }
-.hero { padding: 3rem 6vw 1rem; }
-.hero img.banner { width: 100%; height: auto; border: 1px solid var(--line);
-  border-radius: 10px; }
-.logo { width: 92px; height: 92px; border-radius: 18px;
-  border: 1px solid var(--line); }
-h1 { font-size: 2.4rem; margin: 0.4em 0 0.1em; }
-h2 { border-bottom: 2px solid var(--acc); padding-bottom: 0.2em;
-  margin-top: 2em; }
-.lede { font-size: 1.15rem; max-width: 62ch; }
-main { padding: 0 6vw 3rem; max-width: 1180px; margin: 0 auto; }
-.grid { display: grid; gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
-.card { background: var(--panel); border: 1px solid var(--line);
-  border-radius: 12px; padding: 1rem 1.2rem; }
-.card.pop { animation: rise 0.7s ease both; }
-@keyframes rise { from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: none; } }
-pre.code { background: #101014; color: #e8e6df; padding: 1rem 1.2rem;
-  border-radius: 12px; overflow-x: auto; font-size: 0.86rem;
-  border-left: 5px solid var(--acc); }
-table { border-collapse: collapse; width: 100%; }
-td, th { border-bottom: 1px solid var(--line); padding: 0.45rem 0.6rem;
-  text-align: left; }
-.shots { display: grid; gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-.shots img { width: 100%; height: auto; border: 1px solid var(--line);
-  border-radius: 10px; background: #f4f1e8; }
-footer { padding: 2rem 6vw; border-top: 1px solid var(--line);
-  color: var(--mut); }
-.rail { display: flex; gap: 1.2rem; align-items: flex-start; }
-.rail nav { position: sticky; top: 1rem; min-width: 180px; }
-@media (max-width: 760px) { .rail { flex-direction: column; }
-  .rail nav { position: static; } }
-@media (prefers-reduced-motion: reduce) {
-  .card.pop { animation: none; } * { scroll-behavior: auto; } }
+@font-face{font-family:'Almendra Display';src:url('fonts/AlmendraDisplay-Regular.ttf') format('truetype')}
+@font-face{font-family:'Archivo';src:url('fonts/Archivo.ttf') format('truetype')}
+*{box-sizing:border-box}
+body{margin:0;background:#dfe3e0;color:#3e3226;font-family:'Archivo',sans-serif;line-height:1.65;font-size:17px}
+.top{background:#3e3226;color:#f4f1e8;padding:26px 22px 20px;text-align:center}
+.top h1{font-family:'Almendra Display',serif;margin:0;font-size:2.2rem;letter-spacing:.04em}
+.hair{height:4px;background:#c2a14d}
+main{max-width:720px;margin:26px auto;padding:0 18px 30px}
+.cottage{background:#f7f5ee;border:1px solid #3e3226}
+.roof{height:34px;background:repeating-linear-gradient(115deg,#c2a14d,#c2a14d 14px,#b08f3e 14px,#b08f3e 22px)}
+.body{padding:22px 28px 26px}
+img.hero{width:100%;height:auto;display:block}
+.door{display:block;background:#3e3226;color:#f4f1e8;text-align:center;text-decoration:none;font-family:'Almendra Display',serif;font-size:1.3rem;padding:20px 16px 16px;margin:22px auto 8px;max-width:440px;border-top:5px solid #c2a14d;position:relative;transition:background .2s}
+.door:hover{background:#4a3c2c}
+.door:hover::after{content:'';position:absolute;left:0;right:0;bottom:0;height:12px;background:rgba(244,241,232,.18)}
+.door:active{background:#33291e}
+.note{background:#fff;border:1px solid #3e3226;border-top:14px solid #c2a14d;padding:14px 18px;margin:20px 0}
+.note h2{font-family:'Almendra Display',serif;margin:0 0 6px;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase}
+a.rope{color:#3e3226;text-decoration:none;border-bottom:3px double #8a7a54}
+a.rope:hover{border-bottom-style:solid}
+a:visited{color:#6b6f6e}
+.tide{height:16px;background-image:radial-gradient(circle at 6px 8px,#3e3226 2px,transparent 3px),radial-gradient(circle at 22px 6px,#f4f1e8 2px,transparent 3px);background-size:34px 16px;opacity:.7;margin:24px 0}
+.tide.short{width:46%;margin-left:auto;margin-right:auto}
+.shingle{height:22px;background-image:radial-gradient(ellipse 16px 10px at 12px 12px,#9aa5a3 60%,#7e8884 62%,transparent 64%);background-size:26px 22px}
+footer{max-width:720px;margin:0 auto;padding:0 18px 34px;color:#55534c;font-size:.9rem}
 </style>
 </head>
-<body class="layout-poster">
-<!-- This page exists for Minimal-Youtube alone: the layout (poster),
-     the colors, and the type were picked for this project, not
-     shared with the other project pages. The code block below is
-     copied from the file it names, line for line. If it looks
-     plain, that is because the project is plain, and I would
-     rather the page match the project than dress it up. The one
-     thing I will not do here is oversell: what this project does
-     not do is stated on the page, not hidden from it. -->
-<header class="hero">
-  <img class="logo" src="assets/logo.png" alt="Minimal Youtube logo">
-  <img class="banner" src="assets/banner.png" alt="">
-  <h1>Minimal Youtube</h1>
-  <p class="mono"><a href="https://github.com/Epsilon0xCell/Minimal-Youtube">github.com/Epsilon0xCell/Minimal-Youtube</a></p>
-</header>
-
+<body>
+<header class="top"><h1>Minimal-Youtube</h1></header>
+<div class="hair"></div>
 <main>
-  <section class="rail">
-    <nav aria-label="on this page">
-      <p class="mono"><a href="#run">Run it</a><br>
-      <a href="#files">The files</a><br>
-      <a href="#sheets">The sheets</a><br>
-      <a href="https://github.com/Epsilon0xCell/Minimal-Youtube">The repo</a></p>
-    </nav>
-    <div>
-      <p class="lede">Minimal Youtube is one of my projects. The README in the repo is short, so this page sticks to what the files themselves show.</p>
-      <div class="grid">
-        <div class="card pop"><h3>What it is</h3>
-          <p>Minimal Youtube: 4 files, 6 counted
-          lines across Markdown 6. One job, done in the
-          open, in files you can read.</p></div>
-        <div class="card pop"><h3>The biggest piece</h3>
-          <p><code>README.md</code> carries the most
-          lines. If the project grows, that file is where the growth
-          lands first, for better or worse.</p></div>
-        <div class="card pop"><h3>The honest gap</h3>
-          <p>No test files yet. That is the honest gap, and the roadmap in the visuals folder says what the first one should cover.</p></div>
-      </div>
-      <section id="run">
-        <h2>Run it</h2>
-        <p>The repo README has the exact commands for this one. The
-        shape is the shape for most of my projects: clone it, read the
-        top file first so you know what will happen, then run it on
-        something you do not mind breaking.</p>
-        <p class="mono">$ git clone https://github.com/Epsilon0xCell/Minimal-Youtube.git<br>$ cd Minimal-Youtube</p>
-      </section>
-      
-  <section aria-label="real code">
-    <h2>The code, as it sits in the repo</h2>
-    <p>From <code>README.md</code>, line 1 on. I did
-    not tidy it for the page. What you see is what the file has.</p>
-    <pre class="code"><code>![Banner](banner.png)
-
-# Minimal-Youtube
-```
-https://chromewebstore.google.com/detail/minimaltube-productive-mi/bhnfblpekampnnmadaekkpacdplkgcnl
-```</code></pre>
-  </section>
-      <section id="files">
-        <h2>The files that matter</h2>
-        <table><tr><th>File</th><th>Lines</th></tr>
-        <tr><td><code>README.md</code></td><td>6</td></tr>
-        <tr><td><code>banner.png</code></td><td>0</td></tr>
-        <tr><td><code>logo.png</code></td><td>0</td></tr>
-        <tr><td><code>LICENSE</code></td><td>0</td></tr>
-        </table>
-        <p>Names doing the work: <span class="mono">no named functions in the snapshot</span>.</p>
-      </section>
-      <section id="sheets">
-        <h2>Drawn by hand</h2>
-        <p>I sketch my projects on notebook paper so I have to
-        understand them well enough to draw them. The full set,
-        with the counts and how they were counted, is the
-        <a href="https://github.com/Epsilon0xCell/Minimal-Youtube/tree/main/Minimal-Youtube-Visuals">Minimal-Youtube-Visuals</a>
-        folder in the repo. Nothing is drawn over the binder holes.
-        That is a rule, not a style.</p>
-        <div class="shots">
-          <img src="assets/architecture.png" alt="Hand drawn architecture sheet for Minimal Youtube">
-          <img src="assets/flowchart.png" alt="Hand drawn flowchart sheet for Minimal Youtube">
-          <img src="assets/product-map.png" alt="Hand drawn product map sheet for Minimal Youtube">
-        </div>
-      </section>
-    </div>
-  </section>
+<div class="cottage">
+<div class="roof"></div>
+<div class="body">
+<img class="hero" src="https://raw.githubusercontent.com/Epsilon0xCell/Minimal-Youtube/main/banner.png" alt="The cottage with the relaid thatch patch and the painted boat">
+<p>This repository is a signpost, not the extension itself. It holds a single Chrome Web Store link, contains no code of its own, and claims no credit for the extension it points to.</p>
+<div class="tide short"></div>
+<p>The linked extension, MinimalTube, offers a YouTube interface with the clutter taken away: fewer distractions around the video. This repo holds no feature list of its own, so nothing more specific is claimed here.</p>
+<a class="door" href="https://chromewebstore.google.com/detail/minimaltube-productive-mi/bhnfblpekampnnmadaekkpacdplkgcnl">MinimalTube on the Chrome Web Store</a>
+<p style="text-align:center;font-size:.9rem;color:#6b6f6e">The one door out of this house. The link is reproduced exactly as written in the repo; it was not re-verified in a browser in this pass, and nothing here installs or configures the extension.</p>
+<div class="note"><h2>Link care</h2><p style="margin:0">If the link ever stops resolving, the fault is reported as an issue against this pointer repo, not against the extension. The drawn sheets for this repo live in its <a class="rope" href="https://github.com/Epsilon0xCell/Minimal-Youtube/tree/main/Minimal-Youtube-Visuals">Minimal-Youtube-Visuals</a> folder, and the source is the <a class="rope" href="https://github.com/Epsilon0xCell/Minimal-Youtube">repo on GitHub</a>.</p></div>
+</div>
+</div>
 </main>
-<footer>
-  <p>Minimal Youtube is one of my projects. This page was written
-  from the repo itself on 2026-10-30: the counts are the
-  repo's counts, the code is the repo's code, and the gaps are the
-  repo's gaps.</p>
-</footer>
+<footer><p>Licence: MIT (see the LICENSE file in the repo). Fonts: Almendra Display and Archivo, SIL Open Font License 1.1, license texts beside the font files on this site.</p><div class="shingle"></div></footer>
 </body>
 </html>
