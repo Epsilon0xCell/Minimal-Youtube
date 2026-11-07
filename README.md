@@ -1,9 +1,11 @@
-![Intro: the shore, the empty cottage, and one paler patch of relaid thatch](intro-banner.png)
+![Intro: the view from the middle seats of an empty cinema, the plain white screen filling the dark, the red seat backs fallen into shadow and one gold aisle light glowing at the row's end](intro-banner.png)
 
 
 # Minimal-Youtube
 
-![Banner](banner.png)
+<p align="center"><img src="logo.png" alt="Minimal-Youtube logo: the back of a single red velvet cinema seat facing a plain glowing white screen in a black auditorium, one small gold aisle light glowing at its side" width="200"></p>
+
+![Banner: an empty cinema in the dark, rows of red velvet seats all unoccupied, a single projector beam cutting through dust motes to the clean white screen glowing at the front, a gold lit aisle running down the right side](banner.png)
 
 ![Scene](scene.svg)
 
