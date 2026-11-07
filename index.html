@@ -3,34 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Minimal-Youtube: a signpost at the cottage door</title>
-<meta name="description" content="A pointer repo holding one Chrome Web Store link for the MinimalTube extension, for a cleaner YouTube interface.">
+<title>Minimal-Youtube: the emptied cinema</title>
+<meta name="description" content="A repo for a calmer YouTube: a pointer to the MinimalTube extension, and a userscript of its own that hides the clutter around the video.">
 <style>
-@font-face{font-family:'Almendra Display';src:url('fonts/AlmendraDisplay-Regular.ttf') format('truetype')}
-@font-face{font-family:'Archivo';src:url('fonts/Archivo.ttf') format('truetype')}
+@font-face{font-family:'Limelight';src:url('fonts/Limelight-Regular.ttf') format('truetype')}
+@font-face{font-family:'Montserrat';src:url('fonts/Montserrat-Regular.ttf') format('truetype');font-weight:400}
+@font-face{font-family:'Montserrat';src:url('fonts/Montserrat-Bold.ttf') format('truetype');font-weight:700}
 *{box-sizing:border-box}
-body{margin:0;background:#dfe3e0;color:#3e3226;font-family:'Archivo',sans-serif;line-height:1.65;font-size:17px}
-.top{background:#3e3226;color:#f4f1e8;padding:26px 22px 20px;text-align:center}
-.top h1{font-family:'Almendra Display',serif;margin:0;font-size:2.2rem;letter-spacing:.04em}
-.hair{height:4px;background:#c2a14d}
-main{max-width:720px;margin:26px auto;padding:0 18px 30px}
-.cottage{background:#f7f5ee;border:1px solid #3e3226}
-.roof{height:34px;background:repeating-linear-gradient(115deg,#c2a14d,#c2a14d 14px,#b08f3e 14px,#b08f3e 22px)}
+body{margin:0;background:#0a0a0c;color:#e9e2cf;font-family:'Montserrat',sans-serif;line-height:1.65;font-size:17px}
+.top{background:#0a0a0c;color:#f4efe0;padding:26px 22px 20px;text-align:center}
+.top h1{font-family:'Limelight',serif;margin:0;font-size:2.3rem;letter-spacing:.06em;font-weight:400}
+.hair{height:4px;background:linear-gradient(90deg,#7e1d16,#c9a227,#7e1d16)}
+main{max-width:760px;margin:26px auto;padding:0 18px 30px}
+.cottage{background:#131316;border:1px solid #2b2b31}
+.roof{height:30px;background:repeating-linear-gradient(90deg,#8c231a 0 34px,#5f150f 34px 40px);border-bottom:6px solid #000}
 .body{padding:22px 28px 26px}
-img.hero{width:100%;height:auto;display:block}
-.door{display:block;background:#3e3226;color:#f4f1e8;text-align:center;text-decoration:none;font-family:'Almendra Display',serif;font-size:1.3rem;padding:20px 16px 16px;margin:22px auto 8px;max-width:440px;border-top:5px solid #c2a14d;position:relative;transition:background .2s}
-.door:hover{background:#4a3c2c}
-.door:hover::after{content:'';position:absolute;left:0;right:0;bottom:0;height:12px;background:rgba(244,241,232,.18)}
-.door:active{background:#33291e}
-.note{background:#fff;border:1px solid #3e3226;border-top:14px solid #c2a14d;padding:14px 18px;margin:20px 0}
-.note h2{font-family:'Almendra Display',serif;margin:0 0 6px;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase}
-a.rope{color:#3e3226;text-decoration:none;border-bottom:3px double #8a7a54}
+img.hero{width:100%;height:auto;display:block;border:1px solid #2b2b31}
+.door{display:block;background:#f4efe0;color:#14100c;text-align:center;text-decoration:none;font-family:'Limelight',serif;font-size:1.3rem;padding:20px 16px 16px;margin:22px auto 8px;max-width:440px;border-top:5px solid #c9a227;position:relative;transition:background .2s}
+.door:hover{background:#fffdf4}
+.door:hover::after{content:'';position:absolute;left:0;right:0;bottom:0;height:12px;background:rgba(20,16,12,.12)}
+.door:active{background:#e9e2cf}
+.note{background:#17171b;border:1px solid #2b2b31;border-top:14px solid #8c231a;padding:14px 18px;margin:20px 0}
+.note h2{font-family:'Limelight',serif;margin:0 0 6px;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase;font-weight:400}
+a.rope{color:#e8cfa0;text-decoration:none;border-bottom:3px double #8a6a34}
 a.rope:hover{border-bottom-style:solid}
-a:visited{color:#6b6f6e}
-.tide{height:16px;background-image:radial-gradient(circle at 6px 8px,#3e3226 2px,transparent 3px),radial-gradient(circle at 22px 6px,#f4f1e8 2px,transparent 3px);background-size:34px 16px;opacity:.7;margin:24px 0}
+a:visited{color:#9a917c}
+.tide{height:16px;background-image:radial-gradient(circle at 6px 8px,#c9a227 2px,transparent 3px),radial-gradient(circle at 22px 6px,#f4efe0 2px,transparent 3px);background-size:34px 16px;opacity:.7;margin:24px 0}
 .tide.short{width:46%;margin-left:auto;margin-right:auto}
-.shingle{height:22px;background-image:radial-gradient(ellipse 16px 10px at 12px 12px,#9aa5a3 60%,#7e8884 62%,transparent 64%);background-size:26px 22px}
-footer{max-width:720px;margin:0 auto;padding:0 18px 34px;color:#55534c;font-size:.9rem}
+.shingle{height:22px;background-image:radial-gradient(ellipse 16px 10px at 12px 12px,#3a3a41 60%,#26262b 62%,transparent 64%);background-size:26px 22px}
+footer{max-width:760px;margin:0 auto;padding:0 18px 34px;color:#8f8875;font-size:.9rem}
 </style>
 </head>
 <body>
@@ -40,16 +41,16 @@ footer{max-width:720px;margin:0 auto;padding:0 18px 34px;color:#55534c;font-size
 <div class="cottage">
 <div class="roof"></div>
 <div class="body">
-<img class="hero" src="https://raw.githubusercontent.com/Epsilon0xCell/Minimal-Youtube/main/banner.png" alt="The cottage with the relaid thatch patch and the painted boat">
-<p>This repository is a signpost, not the extension itself. It holds a single Chrome Web Store link, contains no code of its own, and claims no credit for the extension it points to.</p>
+<img class="hero" src="https://raw.githubusercontent.com/Epsilon0xCell/Minimal-Youtube/main/banner.png" alt="An empty cinema in the dark, rows of red velvet seats all unoccupied, a single projector beam cutting through dust motes to the clean white screen glowing at the front, a gold lit aisle running down the right side">
+<p>This repository is a seat in an emptied cinema, not the film itself. It began as a signpost: one Chrome Web Store link, and no claim to credit for the extension it points to. It has since added one small script of its own, kept in the repo beside the link.</p>
 <div class="tide short"></div>
-<p>The linked extension, MinimalTube, offers a YouTube interface with the clutter taken away: fewer distractions around the video. This repo holds no feature list of its own, so nothing more specific is claimed here.</p>
+<p>The linked extension, MinimalTube, offers a YouTube interface with the clutter taken away: fewer distractions around the video. The repo's own userscript, minimal-youtube.user.js, does the same emptying locally in your browser: it hides the watch page sidebar and its recommendations, the comments, Shorts shelves and end screen cards, and lets the watch page use the width the sidebar gave up.</p>
 <a class="door" href="https://chromewebstore.google.com/detail/minimaltube-productive-mi/bhnfblpekampnnmadaekkpacdplkgcnl">MinimalTube on the Chrome Web Store</a>
-<p style="text-align:center;font-size:.9rem;color:#6b6f6e">The one door out of this house. The link is reproduced exactly as written in the repo; it was not re-verified in a browser in this pass, and nothing here installs or configures the extension.</p>
+<p style="text-align:center;font-size:.9rem;color:#a49c85">The one lit aisle out of this cinema. The link is reproduced exactly as written in the repo; it was not re-verified in a browser in this pass, and nothing here installs or configures the extension.</p>
 <div class="note"><h2>Link care</h2><p style="margin:0">If the link ever stops resolving, the fault is reported as an issue against this pointer repo, not against the extension. The drawn sheets for this repo live in its <a class="rope" href="https://github.com/Epsilon0xCell/Minimal-Youtube/tree/main/Minimal-Youtube-Visuals">Minimal-Youtube-Visuals</a> folder, and the source is the <a class="rope" href="https://github.com/Epsilon0xCell/Minimal-Youtube">repo on GitHub</a>.</p></div>
 </div>
 </div>
 </main>
-<footer><p>Licence: MIT (see the LICENSE file in the repo). Fonts: Almendra Display and Archivo, SIL Open Font License 1.1, license texts beside the font files on this site.</p><div class="shingle"></div></footer>
+<footer><p>Licence: MIT (see the LICENSE file in the repo). Fonts: Limelight for display and Montserrat for text, both SIL Open Font License 1.1, self-hosted, license texts beside the font files on this site.</p><div class="shingle"></div></footer>
 </body>
 </html>
